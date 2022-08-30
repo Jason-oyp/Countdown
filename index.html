@@ -37,7 +37,7 @@
         const h1 = document.getElementById("h1");
         setInterval(() => {
             const current = new Date();
-            if (current.getHours() >= 18 && current.getHours() < 9) {
+            if (current.getHours() >= 18 || current.getHours() < 9) {
                 h1.innerHTML = "现在是下班时间,无需倒计时";
                 return
             }
