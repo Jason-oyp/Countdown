@@ -39,7 +39,7 @@
         setInterval(() => {
             const current = new Date();
             if (current.getDay() === 6 || current.getDay() === 0) {
-                h1.innerHTML === "今天是周末，看啥呢";
+                h1.innerHTML = "今天是周末，看啥呢";
                 return
             }
             if (current.getHours() >= 18 || current.getHours() < 9) {
