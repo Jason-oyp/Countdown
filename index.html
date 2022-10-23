@@ -42,13 +42,13 @@
                 h1.innerHTML = "今天是周末，看啥呢";
                 return
             }
-            if (current.getHours() >= 18 || current.getHours() < 9) {
+            if ((current.getHours() === 17 && current.getMinutes() >= 30) || (current.getHours() >= 17) || current.getHours() < 9) {
                 h1.innerHTML = "现在是下班时间,无需倒计时";
                 return
             }
             const down = new Date();
-            down.setHours(18);
-            down.setMinutes(0);
+            down.setHours(17);
+            down.setMinutes(30);
             down.setSeconds(0);
             const ms = down.getTime() - current.getTime()
             const second = Math.floor(ms / 1000 % 60)
